@@ -1,0 +1,87 @@
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  font-family: sans-serif;
+}
+body{
+  background-color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+h1, h2{
+  font-size: 2rem;
+  text-align: center;
+}
+h2{
+  font-size: 1.8rem;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#timeNameLabel{
+  font-size: 24px;
+}
+#timeName{
+  height: 35px;
+  width: 250px;
+  color: black;
+  font-size: 26px;
+  font-family: monospace;
+  border-radius: 6px;
+  border: 0;
+  padding: 5px;
+}
+#nameSaveBtn, #randomTimesBtn{
+  max-width: 350px;
+  height: 35px;
+  color: black;
+  border-radius: 6px;
+  border: 0;
+  font-size: 24px;
+  font-family: cursive;
+  transition: 0.5s;
+
+}
+
+#randomTimesBtn{
+  display: flex;
+  width: 150px;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+#timesSave{
+  font-size: 20px;
+  list-style: none;
+}
+#liTimeName{
+  color: rgba(255, 255, 255, 0.918);
+  padding: 2px;
+}
+
+#randomTimes{
+  font-size: 20px;
+  list-style: none;
+  margin-bottom: 40px;
+
+}
+
+#liRandomTimes{
+  color: rgba(255, 255, 255, 0.918);
+  padding: 2px;
+}
+
+button:hover{
+  background-color:rgba(0, 0, 0, 0.075)
+}

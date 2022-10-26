@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Sorteador de Times</title>
+</head>
+<body>
+  <h1>Sorteador de Times</h1>
+
+  <div class="inputs">
+    <label for="timeName" id="timeNameLabel">Nome do time: </label>
+    <input type="text" id="timeName" name="timeName" required>
+    <button type="button" id="nameSaveBtn">Salvar time</button>
+  </div>
+  <ul id="timesSave"></ul>
+
+  <h2>Times sorteados:</h2>
+  <button type="button" id="randomTimesBtn">Sortear times</button>
+  <ul id="randomTimes"></ul>
+</body>
+</html>
