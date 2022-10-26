@@ -28,9 +28,7 @@ h2{
   align-items: center;
   gap: 20px;
 }
-#timeNameLabel{
-  font-size: 24px;
-}
+
 #timeName{
   height: 35px;
   width: 250px;
@@ -50,15 +48,17 @@ h2{
   font-size: 24px;
   font-family: cursive;
   transition: 0.5s;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
 #randomTimesBtn{
-  display: flex;
-  width: 150px;
+  width: 180px;
+  height: 40px;
   font-size: 20px;
-  text-align: center;
-
 }
 
 #timesSave{
@@ -68,6 +68,11 @@ h2{
 #liTimeName{
   color: rgba(255, 255, 255, 0.918);
   padding: 2px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 15px;
+  margin-bottom: 12px;
 }
 
 #randomTimes{
@@ -84,4 +89,19 @@ h2{
 
 button:hover{
   background-color:rgba(0, 0, 0, 0.075)
+}
+
+#btnRemovedLi{
+  color: #000;
+  border-radius: 80%;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.7s;
+}
+
+.hide{
+  display: none;
 }

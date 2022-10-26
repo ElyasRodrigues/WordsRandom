@@ -8,20 +8,19 @@
   <script src="./index.js" defer></script>
   <link rel="stylesheet" href="./style.css">
 
-  <title>Sorteador de Times</title>
+  <title>Sorteador de Palavras</title>
 </head>
 <body>
-  <h1>Sorteador de Times</h1>
+  <h1>Sorteador de Palavras</h1>
 
   <div class="inputs">
-    <label for="timeName" id="timeNameLabel">Nome do time: </label>
-    <input type="text" id="timeName" name="timeName" required>
-    <button type="button" id="nameSaveBtn">Salvar time</button>
+    <input type="text" placeholder="Digite a palavra" id="timeName" name="timeName" required>
+    <button type="button" id="nameSaveBtn">Salvar palavra</button>
   </div>
   <ul id="timesSave"></ul>
 
-  <h2>Times sorteados:</h2>
-  <button type="button" id="randomTimesBtn">Sortear times</button>
-  <ul id="randomTimes"></ul>
+  <h2 class="hide">Palavras sorteadas:</h2>
+  <button class="hide" type="button" id="randomTimesBtn">Sortear palavras</button>
+  <ul class="hide" id="randomTimes"></ul>
 </body>
 </html>
