@@ -30,19 +30,23 @@ function printRandomWords(){
 
 
 function printSaveName(){
-  const li = document.createElement("li") 
-  li.innerText = document.getElementById("timeName").value
-  words.push(document.getElementById("timeName").value)
-  li.setAttribute("id", "liTimeName")
-  const btnRemovedLi = document.createElement("button")
-  btnRemovedLi.type = "button"
-  btnRemovedLi.innerText = "x"
-  btnRemovedLi.setAttribute("id", "btnRemovedLi")
-  btnRemovedLi.setAttribute("onclick","remover(this)")
-  li.appendChild(btnRemovedLi)
-  document.getElementById("timesSave").appendChild(li)
-  document.getElementById("timeName").value = ""
-  document.getElementById("timeName").focus()
+  if(document.getElementById("timeName").value !== ""){
+    const li = document.createElement("li") 
+    li.innerText = document.getElementById("timeName").value
+    words.push(document.getElementById("timeName").value)
+    li.setAttribute("id", "liTimeName")
+    const btnRemovedLi = document.createElement("button")
+    btnRemovedLi.type = "button"
+    btnRemovedLi.innerText = "x"
+    btnRemovedLi.setAttribute("id", "btnRemovedLi")
+    btnRemovedLi.setAttribute("onclick","remover(this)")
+    li.appendChild(btnRemovedLi)
+    document.getElementById("timesSave").appendChild(li)
+    document.getElementById("timeName").value = ""
+    document.getElementById("timeName").focus()
+  } else {
+    return
+  }
 }
 
 function remover(btn){
@@ -50,6 +54,14 @@ function remover(btn){
   document.getElementById("timesSave").removeChild(btnR)
   console.log(btnR);
 }
+
+document.getElementById("timeName").addEventListener("keydown", (ev) => {
+  if(ev.key === "Enter"){
+    printSaveName()
+  } else {
+    return
+  }
+})
 
 document.getElementById("nameSaveBtn").addEventListener("click", printSaveName)
 document.getElementById("randomTimesBtn").addEventListener("click", randomWords)
