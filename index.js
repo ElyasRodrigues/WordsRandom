@@ -35,6 +35,7 @@ function printSaveName(){
     li.innerText = document.getElementById("timeName").value
     words.push(document.getElementById("timeName").value)
     li.setAttribute("id", "liTimeName")
+
     const btnRemovedLi = document.createElement("button")
     btnRemovedLi.type = "button"
     btnRemovedLi.innerText = "x"
@@ -52,7 +53,11 @@ function printSaveName(){
 function remover(btn){
   let btnR = btn.parentNode
   document.getElementById("timesSave").removeChild(btnR)
-  console.log(btnR);
+  let nameT = btnR.innerText;
+  let nameArr = (nameT.substring(0, (nameT.length - 1)))
+  let indice = words.indexOf(nameArr)
+  words.splice(indice, 1)
+
 }
 
 document.getElementById("timeName").addEventListener("keydown", (ev) => {
@@ -65,3 +70,4 @@ document.getElementById("timeName").addEventListener("keydown", (ev) => {
 
 document.getElementById("nameSaveBtn").addEventListener("click", printSaveName)
 document.getElementById("randomTimesBtn").addEventListener("click", randomWords)
+
